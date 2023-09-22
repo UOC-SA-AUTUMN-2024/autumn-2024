@@ -11,12 +11,12 @@
   <h3 align="center">SA</h3>
 
   <p align="center">
-    SA project stub
+    Esqueleto de proyecto para el laboratorio de SA
     <br />
     <br />
-    <a href="https://github.com/ppinedar/epcsd-spring-2023/issues">Report Bug</a>
+    <a href="https://github.com/UOC-SA-AUTUMN-2023/epcsd-spring-2023/issues">Report Bug</a>
     ·
-    <a href="https://github.com/ppinedar/epcsd-spring-2023/issues">Request Feature</a>
+    <a href="https://github.com/UOC-SA-AUTUMN-2023/epcsd-spring-2023/issues">Request Feature</a>
   </p>
 </div>
 
@@ -24,44 +24,44 @@
 
 <!-- TABLE OF CONTENTS -->
 <details>
-  <summary>Contents</summary>
+  <summary>Contenidos</summary>
   <ol>
     <li>
-      <a href="#about-this-project">About this project</a>
+      <a href="#sobre-este-proyecto">Sobre este proyecto</a>
       <ul>
-        <li><a href="#made-with">Made with</a></li>
+        <li><a href="#hecho-con">Hecho con</a></li>
       </ul>
     </li>
     <li>
-      <a href="#before-starting">Before starting</a>
+      <a href="#antes-de-empezar">Antes de empezar</a>
     </li>
     <li>
-      <a href="#installation">Tnstallation</a>
+      <a href="#instalación">Instalación</a>
       <ul>
-        <li><a href="#docker-desktop--docker-compose-installation">Docker Desktop / Docker Compose installation</a></li>
-        <li><a href="#basic-infrastructure-dockers">Basic infrastructure (dockers)</a></li>
-        <li><a href="#microservices-stubs">Microservices stubs</a></li>
+        <li><a href="#docker-desktop--docker-compose">Docker Desktop / Docker Compose</a></li>
+        <li><a href="#infraestructura-básica-dockers">Infraestructura básica (dockers)</a></li>
+        <li><a href="#esqueletos-de-microservicios">Esqueletos de microservicios</a></li>
       </ul>
     </li>
-    <li><a href="#links-to-tools-libraries-and-used-modules">Links to tools, libraries and used modules</a></li>
-    <li><a href="#contact">Contact</a></li>
+    <li><a href="#enlaces-a-herramientas-librerías-y-módulos-usados">Enlaces a herramientas, librerías y módulos usados</a></li>
+    <li><a href="#contacto">Contacto</a></li>
   </ol>
 </details>
 
 <!-- About this project -->
-## About this project
+## Sobre este proyecto
 
-This is the lab project for the SA course at the UOC. It is made up of 3 elements (each one in its own GIT repository):
+Este es el proyecto de laboratorio de la asignatura EPCSD de la UOC. Se compone de 3 elementos (cada una tiene su repositorio GIT):
 
-* A <a href="https://github.com/ppinedar/epcsd-spring-2023/blob/main/docker-compose.yml">docker-compose.yml</a> file to startup the basic infrastructure needed to run the services
-* A folder for the <a href="https://github.com/ppinedar/epcsd-spring-2023-productcatalog">ProductCatalog</a> microservice (<a href="https://github.com/ppinedar/epcsd-spring-2023-productcatalog-improved">improved version here</a>)
-* A folder for the <a href="https://github.com/ppinedar/epcsd-spring-2023-user">User</a> microservice (<a href="https://github.com/ppinedar/epcsd-spring-2023-user-improved">improved version here</a>)
-* A folder for the <a href="https://github.com/ppinedar/epcsd-spring-2023-notification">Notification</a> microservice (<a href="https://github.com/ppinedar/epcsd-spring-2023-notification-improved">improved version here</a>)
+* Un archivo <a href="https://github.com/UOC-SA-AUTUMN-2023/epcsd-spring-2023/blob/main/docker-compose.yml">docker-compose.yml</a> para arrancar la infraestructura básica necesaria para poder ejecutar los servicios
+* Una carpeta para el microservicio <a href="https://github.com/UOC-SA-AUTUMN-2023/epcsd-spring-2023-productcatalog">ProductCatalog</a> (<a href="https://github.com/UOC-SA-AUTUMN-2023/epcsd-spring-2023-productcatalog-improved">versión mejorada aquí</a>)
+* Una carpeta para el microservicio <a href="https://github.com/UOC-SA-AUTUMN-2023/epcsd-spring-2023-user">User</a> (<a href="https://github.com/UOC-SA-AUTUMN-2023/epcsd-spring-2023-user-improved">versión mejorada aquí</a>)
+* Una carpeta para el microservicio <a href="https://github.com/UOC-SA-AUTUMN-2023/epcsd-spring-2023-notification">Notification</a> (<a href="https://github.com/UOC-SA-AUTUMN-2023/epcsd-spring-2023-notification-improved">versión mejorada aquí</a>)
 
-<p align="right">(<a href="#top">go up</a>)</p>
+<p align="right">(<a href="#top">ir arriba</a>)</p>
 
 
-### Made with
+### Hecho con
 
 * [Docker](https://www.docker.com/) / [Docker Compose](https://github.com/docker/compose)
 * [Spring](https://spring.io/) / [Spring Boot](https://spring.io/projects/spring-boot)
@@ -69,39 +69,39 @@ This is the lab project for the SA course at the UOC. It is made up of 3 element
 * [Apache Kafka](https://kafka.apache.org/)
 * [PostgreSQL](https://www.postgresql.org/)
 
-<p align="right">(<a href="#top">go up</a>)</p>
+<p align="right">(<a href="#top">ir arriba</a>)</p>
 
 
-## Before starting
+## Antes de empezar
 
-To set up the containers that are part of the basic infrastructure of the project, the following ports will be used:
+Para el funcionamiento de los contenedores que forman parte de la infraestructura básica del proyecto, se usaran los siguientes puertos:
 
 * 22181 - Apache Kafka (Zookeeper)
 * 19092 - Apache Kafka (Server)
 * 54320, 54321 - PostgreSQL
 * 18080 - Adminer
-* 18081 - Used by the productcatalog microservice
-* 18082 - Used by the user microservice
+* 18081 - Usado por el microservicio productcatalog
+* 18082 - Usado por el microservicio user
 
-To avoid conflicts with other installed applications, the default ports of all applications have been modified. Still, if there is a conflict over a port already in use, simply modifying the ports specified in the [docker-compose.yml](https://github.com/ppinedar/epcsd-spring/blob/main/docker-compose.yml) file will fix the problem. This link to the official docker compose documentation explains how to modify this configuration using the _ports_: [Networking in Compose](https://docs.docker.com/compose/networking/) option.
+Para evitar conflictos con otras aplicaciones instaladas, se han modificado los puertos por defecto de todas las aplicaciones. Aún así, si hubiera un conflicto por un puerto ya en uso, bastaría con modificar los puertos especificados en el archivo [docker-compose.yml](https://github.com/UOC-SA-AUTUMN-2023/epcsd-spring-2023/blob/main/docker-compose.yml) para solucionar el problema. Este link de la documentación oficial de docker compose explica como modificar esta configuración mediante la opción _ports_: [Networking in Compose](https://docs.docker.com/compose/networking/).
 
-__IMPORTANT NOTICE:__ The modified ports will also have to be changed in the microservices configuration (usually defined in the Spring _application.properties_ file).
+__AVISO IMPORTANTE:__ Los puertos que se modifiquen se tendran que cambiar también en la configuración de los microservicios (normalmente definidos en  el archivo _application.properties_).
 
 
-## Installation
+## Instalación
 
-### Docker Desktop / Docker Compose installation
+### Docker Desktop / Docker Compose
 
-Proceed to install Docker Compose following the steps described in the following guide: https://docs.docker.com/compose/install/ (according to your OS).
+Instalaremos Docker Compose siguiendo los pasos descritos (según SO) en la siguiente guía: https://docs.docker.com/compose/install/
 
-Under Windows, registration may be required, as <a href="https://docs.docker.com/desktop/windows/install/">Docker Desktop</a>  requires it for educational/personal/non-commercial projects. On the plus side, it will not be necessary to install anything else because it already includes _Compose_.
+Bajo Windows, es posible que sea necesario registrarse, ya que <a href="https://docs.docker.com/desktop/windows/install/">Docker Desktop</a> lo exige así para proyectos educativos/personales/no-comerciales. Como contrapartida, no será necesario instalar nada más porque ya incorpora _Compose_.
 
-It is important that you carefully review the hardware and software requirements described in the installation guides. If your system fails to meet them, even after a successful installation, you will see errors when trying to start containers. An alternative for those with slightly older systems is <a href="https://www.how2shout.com/how-to/how-to-install-docker-toolbox-using-chocolatey-choco-on-windows-10.html">Docker Toolbox</a>.
+Es importante que reviséis con atención los requisitos de hardware y software descritos en las guías de instalación, puesto que si vuestro sistema no los cumple, aunque la aplicación se instale satisfactoriamente, dará errores al intentar arrancar contenedores. Una alternativa para aquellos que tengan sistemas un poco más antiguos es <a href="https://www.how2shout.com/how-to/how-to-install-docker-toolbox-using-chocolatey-choco-on-windows-10.html">Docker Toolbox</a>.
 
-Once Docker Compose is installed, we will continue with the project stub. It is recommended to set up a folder structure like so:
+Una vez instalado Docker Compose, seguiremos con el esqueleto de proyecto. Se recomienda seguir la siguiente estructura de carpetas:
 
 ```
-epcsd-spring
+epcsd-spring-2023
 ├ README.md
 ├ docker-compose.yml
 ├ epcsd-spring-2023-notification
@@ -109,14 +109,14 @@ epcsd-spring
 └ epcsd-spring-2023-user
 ```
 
-<p align="right">(<a href="#top">go up</a>)</p>
+<p align="right">(<a href="#top">ir arriba</a>)</p>
 
 
-### Basic infrastructure (dockers)
+### Infraestructura básica (dockers)
 
-* Download the code in ZIP format or just clone the <a href="https://github.com/ppinedar/epcsd-spring-2023">epcsd-spring-2023</a> repository in the working folder (_epcsd-spring-2023_ if the recommendation has been followed).
+* Descargar ZIP / Clonar el repositorio <a href="https://github.com/UOC-SA-AUTUMN-2023/epcsd-spring-2023">epcsd-spring-2023</a> en la carpeta de trabajo (_epcsd-spring-2023_ si se ha seguido la recomendación).
 
-* From the work folder, run the command:
+* Desde la carpeta, ejecutar el comando:
 
   ```sh
   docker compose up
@@ -126,60 +126,59 @@ epcsd-spring
   docker-compose up
   (Linux)
   ```
-  
-The following containers should start:
 
-* epcsd-spring-2023-adminer_1 - adminer, an SQL client
-* epcsd-spring-2023-kafka_1 - the kafka server
-* epcsd-spring-2023-productdb_1 - the postgresql database for the productcatalog service
-* epcsd-spring-2023-userdb_1 - the postgresql database for the user service
+Deberían arrancarse los contenedores:
+
+* epcsd-spring-2023-adminer_1 - adminer, un cliente SQL
+* epcsd-spring-2023-kafka_1 - el servidor de kafka
+* epcsd-spring-2023-productdb_1 - la bbdd postgresql correspondiente al servicio productcatalog
+* epcsd-spring-2023-userdb_1 - la bbdd postgresql correspondiente al servicio user
 * epcsd-spring-2023-zookeeper_1 - kafka zookeeper
 
-In order to verify that all containers are up and running, we will execute the following command:
-
+Para verificar que se han levantado todos de manera correcta, ejecutaremos el siguiente comando:
+  
   ```sh
   docker ps -a
   ```
-  
-We should see something like this:
 
-![Docker containers running](https://github.com/ppinedar/epcsd-spring-2023/blob/main/docker__containers_running.PNG)
+Deberíamos ver algo como esto:
 
-To check the operation, you can access the _Adminer_ panel at http://localhost:18080/ and make a query against the PostgreSQL DB that we have just instantiated with the following connection data:
+![Docker containers running](https://github.com/UOC-SA-AUTUMN-2023/epcsd-spring-2023/blob/main/docker__containers_running.PNG)
+
+Para comprobar el funcionamiento, se puede acceder al panel _Adminer_ en http://localhost:18080/ y hacer alguna consulta contra las BBDDs PostgreSQL que acabamos de instanciar con los siguientes datos de conexión:
 
 * productdb
-* Engine: PostgreSQL
-* Server: productdb
-* User: product
-* Password: product
-* Schema: product
+* Motor: PostgreSQL
+* Servidor: productdb
+* Usuario: product
+* Contraseña: product
+* Esquema: product
 
-![Adminer productdb 1](https://github.com/ppinedar/epcsd-spring-2023/blob/main/adminer1.PNG)
+![Adminer productdb 1](https://github.com/UOC-SA-AUTUMN-2023/epcsd-spring-2023/blob/main/adminer1.PNG)
 
-![Adminer productdb 2](https://github.com/ppinedar/epcsd-spring-2023/blob/main/adminer1_1.PNG)
+![Adminer productdb 2](https://github.com/UOC-SA-AUTUMN-2023/epcsd-spring-2023/blob/main/adminer1_1.PNG)
 
 * userdb
-* Engine: PostgreSQL
-* Server: userdb
-* User: user
-* Password: user
-* Schema: user
+* Motor: PostgreSQL
+* Servidor: userdb
+* Usuario: user
+* Contraseña: user
+* Esquema: user
 
-![Adminer userdb 1](https://github.com/ppinedar/epcsd-spring-2023/blob/main/adminer2.PNG)
+![Adminer userdb 1](https://github.com/UOC-SA-AUTUMN-2023/epcsd-spring-2023/blob/main/adminer2.PNG)
 
-![Adminer userdb 2](https://github.com/ppinedar/epcsd-spring-2023/blob/main/adminer2_1.PNG)
+![Adminer userdb 2](https://github.com/UOC-SA-AUTUMN-2023/epcsd-spring-2023/blob/main/adminer2_1.PNG)
+
+### Esqueletos de microservicios
+
+* Descargar ZIP / Clonar los repositorios <a href="https://github.com/UOC-SA-AUTUMN-2023/epcsd-spring-2023-productcatalog">epcsd-spring-2023-productcatalog</a>, <a href="https://github.com/UOC-SA-AUTUMN-2023/epcsd-spring-2023-user">epcsd-spring-2023-user</a> y <a href="https://github.com/UOC-SA-AUTUMN-2023/epcsd-spring-2023-notification">epcsd-spring-2023-notification</a> dentro de la carpeta de trabajo (_epcsd-spring-2023_ si se ha seguido la recomendación)
+* Abrir los proyectos en el entorno de desarrollo preferido
+* Verificar la correcta compilación y ejecución arrancando los proyectos y comprobando que se puede acceder a http://localhost:18081/swagger-ui/index.html y http://localhost:18082/swagger-ui/index.html
+
+<p align="right">(<a href="#top">ir arriba</a>)</p>
 
 
-### Microservices stubs
-
-* Download the code in ZIP format or just clone the <a href="https://github.com/ppinedar/epcsd-spring-2023-productcatalog">epcsd-spring-2023-productcatalog</a>, <a href="https://github.com/ppinedar/epcsd-spring-2023-user">epcsd-spring-2023-user</a> and <a href="https://github.com/ppinedar/epcsd-spring-notification">epcsd-spring-notification</a> repositories into the working folder (_epcsd-spring-2023_ if the recommendation has been followed)
-* Open the projects in the preferred development environment
-* Verify proper build and run by starting the projects and checking that http://localhost:18081/swagger-ui/index.html and http://localhost:18082/swagger-ui/index.html are accessible
-
-<p align="right">(<a href="#top">go up</a>)</p>
-
-
-## Links to used tools, libraries and modules
+## Enlaces a herramientas, librerías y módulos usados
 
 * [Docker](https://www.docker.com/) / [Docker Compose](https://github.com/docker/compose)
 * [Spring](https://spring.io/) / [Spring Boot](https://spring.io/projects/spring-boot)
@@ -192,8 +191,10 @@ To check the operation, you can access the _Adminer_ panel at http://localhost:1
 * [springdoc-openapi-ui (SwaggerUI for OpenApi 3)](https://github.com/springdoc/springdoc-openapi)
 
 
-## Contact
+## Contacto
 
-Pau Pineda - pinedarp@uoc.edu
+Vicenç Font - vfont@uoc.edu
 
 <p align="right">(<a href="#top">ir arriba</a>)</p>
+
+
