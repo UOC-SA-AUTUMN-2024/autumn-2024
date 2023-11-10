@@ -172,7 +172,7 @@ To check the operation, you can access the _Adminer_ panel at http://localhost:1
 
 ### Microservices stubs
 
-* Download the code in ZIP format or just clone the <a href="https://github.com/UOC-SA-AUTUMN-2023/epcsd-spring-2023-productcatalog">epcsd-spring-2023-productcatalog</a>, <a href="https://github.com/UOC-SA-AUTUMN-2023/epcsd-spring-2023-user">epcsd-spring-2023-user</a> and <a href="https://github.com/UOC-SA-AUTUMN-2023/epcsd-spring-notification">epcsd-spring-notification</a> repositories into the working folder (_epcsd-spring-2023_ if the recommendation has been followed)
+* Download the code in ZIP format or just clone the <a href="https://github.com/UOC-SA-AUTUMN-2023/epcsd-spring-2023-productcatalog-improved">epcsd-spring-2023-productcatalog-improved</a>, <a href="https://github.com/UOC-SA-AUTUMN-2023/epcsd-spring-2023-user-improved">epcsd-spring-2023-user-improved</a> and <a href="https://github.com/UOC-SA-AUTUMN-2023/epcsd-spring-notification-improved">epcsd-spring-notification-improved</a> repositories into the working folder (_epcsd-spring-2023_ if the recommendation has been followed)
 * Open the projects in the preferred development environment
 * Verify proper build and run by starting the projects and checking that http://localhost:18081/swagger-ui/index.html and http://localhost:18082/swagger-ui/index.html are accessible
 
