@@ -54,9 +54,9 @@
 This is the lab project for the SA course at the UOC. It is made up of 3 elements (each one in its own GIT repository):
 
 * A <a href="https://github.com/UOC-SA-SPRING-2024/spring-2024/blob/main/docker-compose.yml">docker-compose.yml</a> file to startup the basic infrastructure needed to run the services
-* A folder for the <a href="https://github.com/UOC-SA-SPRING-2024/spring-2024-productcatalog-improved">ProductCatalog</a> microservice 
-* A folder for the <a href="https://github.com/UOC-SA-SPRING-2024/spring-2024-user-improved">User</a> microservice 
-* A folder for the <a href="https://github.com/UOC-SA-SPRING-2024/spring-2024-notification-improved">Notification</a> microservice 
+* A folder for the <a href="https://github.com/UOC-SA-SPRING-2024/spring-2024-productcatalog">ProductCatalog</a> microservice 
+* A folder for the <a href="https://github.com/UOC-SA-SPRING-2024/spring-2024-user">User</a> microservice 
+* A folder for the <a href="https://github.com/UOC-SA-SPRING-2024/spring-2024-notification">Notification</a> microservice 
 
 <p align="right">(<a href="#top">go up</a>)</p>
 
