@@ -129,7 +129,7 @@ autumn-2024
   
 The following containers should start:
 
-* sautumn-2024-adminer_1 - adminer, an SQL client
+* autumn-2024-adminer_1 - adminer, an SQL client
 * autumn-2024-kafka_1 - the kafka server
 * autumn-2024-productdb_1 - the postgresql database for the productcatalog service
 * autumn-2024-userdb_1 - the postgresql database for the user service
