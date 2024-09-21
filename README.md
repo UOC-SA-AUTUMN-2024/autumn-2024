@@ -14,9 +14,9 @@
     SA project stub
     <br />
     <br />
-    <a href="https://github.com/UOC-SA-SPRING-2024/spring-2024/issues">Report Bug</a>
+    <a href="https://github.com/UOC-SA-AUTUMN-2024/autumn-2024/issues">Report Bug</a>
     ·
-    <a href="https://github.com/UOC-SA-SPRING-2024/spring-2024/issues">Request Feature</a>
+    <a href="https://github.com/UOC-SA-AUTUMN-2024/autumn-2024/issues">Request Feature</a>
   </p>
 </div>
 
@@ -53,10 +53,10 @@
 
 This is the lab project for the SA course at the UOC. It is made up of 3 elements (each one in its own GIT repository):
 
-* A <a href="https://github.com/UOC-SA-SPRING-2024/spring-2024/blob/main/docker-compose.yml">docker-compose.yml</a> file to startup the basic infrastructure needed to run the services
-* A folder for the <a href="https://github.com/UOC-SA-SPRING-2024/spring-2024-productcatalog">ProductCatalog</a> microservice 
-* A folder for the <a href="https://github.com/UOC-SA-SPRING-2024/spring-2024-user">User</a> microservice 
-* A folder for the <a href="https://github.com/UOC-SA-SPRING-2024/spring-2024-notification">Notification</a> microservice 
+* A <a href="https://github.com/UOC-SA-AUTUMN-2024/blob/main/docker-compose.yml">docker-compose.yml</a> file to startup the basic infrastructure needed to run the services
+* A folder for the <a href="https://github.com/UOC-SA-AUTUMN-2024/autumn-2024-productcatalog">ProductCatalog</a> microservice 
+* A folder for the <a href="https://github.com/UOC-SA-AUTUMN-2024/autumn-2024-user">User</a> microservice 
+* A folder for the <a href="https://github.com/UOC-SA-AUTUMN-2024/autimn-2024-notification">Notification</a> microservice 
 
 <p align="right">(<a href="#top">go up</a>)</p>
 
@@ -83,7 +83,7 @@ To set up the containers that are part of the basic infrastructure of the projec
 * 18081 - Used by the productcatalog microservice
 * 18082 - Used by the user microservice
 
-To avoid conflicts with other installed applications, the default ports of all applications have been modified. Still, if there is a conflict over a port already in use, simply modifying the ports specified in the [docker-compose.yml](https://github.com/UOC-SA-SPRING-2024/spring-2024/blob/main/docker-compose.yml) file will fix the problem. This link to the official docker compose documentation explains how to modify this configuration using the _ports_: [Networking in Compose](https://docs.docker.com/compose/networking/) option.
+To avoid conflicts with other installed applications, the default ports of all applications have been modified. Still, if there is a conflict over a port already in use, simply modifying the ports specified in the [docker-compose.yml](https://github.com/UOC-SA-AUTUMN-2024/autumn-2024/blob/main/docker-compose.yml) file will fix the problem. This link to the official docker compose documentation explains how to modify this configuration using the _ports_: [Networking in Compose](https://docs.docker.com/compose/networking/) option.
 
 __IMPORTANT NOTICE:__ The modified ports will also have to be changed in the microservices configuration (usually defined in the Spring _application.properties_ file).
 
@@ -101,12 +101,12 @@ It is important that you carefully review the hardware and software requirements
 Once Docker Compose is installed, we will continue with the project stub. It is recommended to set up a folder structure like so:
 
 ```
-spring-2024
+autumn-2024
 ├ README.md
 ├ docker-compose.yml
-├ spring-2024-notification
-├ spring-2024-productcatalog
-└ spring-2024-user
+├ autumn-2024-notification
+├ autumn-2024-productcatalog
+└ autumn-2024-user
 ```
 
 <p align="right">(<a href="#top">go up</a>)</p>
@@ -114,7 +114,7 @@ spring-2024
 
 ### Basic infrastructure (dockers)
 
-* Download the code in ZIP format or just clone the <a href="https://github.com/UOC-SA-SPRING-2024/spring-2024">spring-2024</a> repository in the working folder (_spring-2024_ if the recommendation has been followed).
+* Download the code in ZIP format or just clone the <a href="https://github.com/UOC-SA-AUTUMN-2024/autumn-2024">autumn2024</a> repository in the working folder (_autumn-2024_ if the recommendation has been followed).
 
 * From the work folder, run the command:
 
@@ -129,11 +129,11 @@ spring-2024
   
 The following containers should start:
 
-* spring-2024-adminer_1 - adminer, an SQL client
-* spring-2024-kafka_1 - the kafka server
-* spring-2024-productdb_1 - the postgresql database for the productcatalog service
-* spring-2024-userdb_1 - the postgresql database for the user service
-* spring-2024-zookeeper_1 - kafka zookeeper
+* sautumn-2024-adminer_1 - adminer, an SQL client
+* autumn-2024-kafka_1 - the kafka server
+* autumn-2024-productdb_1 - the postgresql database for the productcatalog service
+* autumn-2024-userdb_1 - the postgresql database for the user service
+* autumn-2024-zookeeper_1 - kafka zookeeper
 
 In order to verify that all containers are up and running, we will execute the following command:
 
@@ -143,7 +143,7 @@ In order to verify that all containers are up and running, we will execute the f
   
 We should see something like this:
 
-![Docker containers running](https://github.com/UOC-SA-SPRING-2024/spring-2024/blob/main/docker__containers_running.PNG)
+![Docker containers running](https://github.com/UOC-SA-AUTUMN-2024/autumn-2024/blob/main/docker__containers_running.PNG)
 
 To check the operation, you can access the _Adminer_ panel at http://localhost:18080/ and make a query against the PostgreSQL DB that we have just instantiated with the following connection data:
 
@@ -154,9 +154,9 @@ To check the operation, you can access the _Adminer_ panel at http://localhost:1
 * Password: product
 * Schema: product
 
-![Adminer productdb 1](https://github.com/UOC-SA-SPRING-2024/spring-2024/blob/main/adminer1.PNG)
+![Adminer productdb 1](https://github.com/UOC-SA-AUTUMN-2024/autumn-2024/blob/main/adminer1.PNG)
 
-![Adminer productdb 2](https://github.com/UOC-SA-SPRING-2024/spring-2024/blob/main/adminer1_1.PNG)
+![Adminer productdb 2](https://github.com/UOC-SA-AUTUMN-2024/autumn-2024/blob/main/adminer1_1.PNG)
 
 * userdb
 * Engine: PostgreSQL
@@ -165,14 +165,14 @@ To check the operation, you can access the _Adminer_ panel at http://localhost:1
 * Password: user
 * Schema: user
 
-![Adminer userdb 1](https://github.com/UOC-SA-SPRING-2024/spring-2024/blob/main/adminer2.PNG)
+![Adminer userdb 1](https://github.com/UOC-SA-AUTUMN-2024/autumn-2024/blob/main/adminer2.PNG)
 
-![Adminer userdb 2](https://github.com/UOC-SA-SPRING-2024/spring-2024/blob/main/adminer2_1.PNG)
+![Adminer userdb 2](https://github.com/UOC-SA-AUTUMN-2024/autumn-2024/blob/main/adminer2_1.PNG)
 
 
 ### Microservices stubs
 
-* Download the code in ZIP format or just clone the <a href="https://github.com/UOC-SA-SPRING-2024/spring-2024-productcatalog">spring-2024-productcatalog</a>, <a href="https://github.com/UOC-SA-SPRING-2024/spring-2024-user">spring-2024-user</a> and <a href="https://github.com/UOC-SA-SPRING-2024/spring-2024-notification">spring-2024-notification</a> repositories into the working folder (_spring-2024_ if the recommendation has been followed)
+* Download the code in ZIP format or just clone the <a href="https://github.com/UOC-SA-SPRING-2024/spring-2024-productcatalog">spring-2024-productcatalog</a>, <a href="https://github.com/UOC-SA-AUTUMN-2024/autumn-2024-user">spring-2024-user</a> and <a href="https://github.com/UOC-SA-AUTUMN-2024/autumn-2024-notification">spring-2024-notification</a> repositories into the working folder (_autumn-2024_ if the recommendation has been followed)
 * Open the projects in the preferred development environment
 * Verify proper build and run by starting the projects and checking that http://localhost:18081/swagger-ui/index.html and http://localhost:18082/swagger-ui/index.html are accessible
 
