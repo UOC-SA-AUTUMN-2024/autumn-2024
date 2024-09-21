@@ -172,7 +172,7 @@ To check the operation, you can access the _Adminer_ panel at http://localhost:1
 
 ### Microservices stubs
 
-* Download the code in ZIP format or just clone the <a href="https://github.com/UOC-SA-SPRING-2024/spring-2024-productcatalog">spring-2024-productcatalog</a>, <a href="https://github.com/UOC-SA-AUTUMN-2024/autumn-2024-user">spring-2024-user</a> and <a href="https://github.com/UOC-SA-AUTUMN-2024/autumn-2024-notification">spring-2024-notification</a> repositories into the working folder (_autumn-2024_ if the recommendation has been followed)
+* Download the code in ZIP format or just clone the <a href="https://github.com/UOC-SA-AUTUMN-2024/autumn-2024-productcatalog">spring-2024-productcatalog</a>, <a href="https://github.com/UOC-SA-AUTUMN-2024/autumn-2024-user">spring-2024-user</a> and <a href="https://github.com/UOC-SA-AUTUMN-2024/autumn-2024-notification">spring-2024-notification</a> repositories into the working folder (_autumn-2024_ if the recommendation has been followed)
 * Open the projects in the preferred development environment
 * Verify proper build and run by starting the projects and checking that http://localhost:18081/swagger-ui/index.html and http://localhost:18082/swagger-ui/index.html are accessible
 
