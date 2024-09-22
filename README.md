@@ -156,7 +156,7 @@ To check the operation, you can access the _Adminer_ panel at http://localhost:1
 
 ![Adminer productdb 1](https://github.com/UOC-SA-AUTUMN-2024/autumn-2024/blob/main/adminer1.png)
 
-![Adminer productdb 2](https://github.com/UOC-SA-AUTUMN-2024/autumn-2024/blob/main/adminer1_1.PNG)
+![Adminer productdb 2](https://github.com/UOC-SA-AUTUMN-2024/autumn-2024/blob/main/adminer1_1.png)
 
 * userdb
 * Engine: PostgreSQL
