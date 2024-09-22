@@ -165,7 +165,7 @@ To check the operation, you can access the _Adminer_ panel at http://localhost:1
 * Password: user
 * Schema: user
 
-![Adminer userdb 1](https://github.com/UOC-SA-AUTUMN-2024/autumn-2024/blob/main/adminer2.PNG)
+![Adminer userdb 1](https://github.com/UOC-SA-AUTUMN-2024/autumn-2024/blob/main/adminer2.png)
 
 ![Adminer userdb 2](https://github.com/UOC-SA-AUTUMN-2024/autumn-2024/blob/main/adminer2_1.PNG)
 
