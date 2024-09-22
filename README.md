@@ -143,7 +143,7 @@ In order to verify that all containers are up and running, we will execute the f
   
 We should see something like this:
 
-![Docker containers running](https://github.com/UOC-SA-AUTUMN-2024/autumn-2024/blob/main/docker__containers_running.PNG)
+![Docker containers running](https://github.com/UOC-SA-AUTUMN-2024/autumn-2024/blob/main/docker_containers_running.png)
 
 To check the operation, you can access the _Adminer_ panel at http://localhost:18080/ and make a query against the PostgreSQL DB that we have just instantiated with the following connection data:
 
